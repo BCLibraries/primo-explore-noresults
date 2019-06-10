@@ -8,7 +8,7 @@
     <md-card-content>
         <p>
             <!---->
-            <span ng-if="!$ctrl.isSearchWithFilter" translate="nui.noresults.description" translate-value-term="{{$ctrl.term}}">There are no results matching your search <em>"{{$ctrl.term}}"</em>.
+            <span ng-if="$ctrl.showQuery()" translate="nui.noresults.description" translate-value-term="{{$ctrl.term}}">There are no results matching your search <em>"{{$ctrl.term}}"</em>.
             </span>
             <!---->
             <!---->
