@@ -18,8 +18,10 @@
             </span>
         </p>
         <ul>
+            <li translate="">Try different keywords.
+            </li>
             <li>
-                Didn't find what you were looking for? <a href="https://bc.on.worldcat.org/search?databaseList=&amp;queryString={{$ctrl.term}}">Try your search in WorldCat </a>.
+                Didn't find what you were looking for? <a href="https://bc.on.worldcat.org/search?databaseList=&amp;queryString={{$ctrl.term}}">Try your search in WorldCat</a>.
             </li>
             <li ng-if="$ctrl.scope == 'bcl'">
                 Looking for Articles? <a target="_self" ng-href="search?query=any,contains,{{$ctrl.term}}&tab=pci_only&vid=bclib_new&sortby=rank&offset=0">
@@ -27,7 +29,8 @@
             <li ng-if="$ctrl.scope == 'pci'">
                 Looking for Books? <a target="_self" ng-href="search?query=any,contains,{{$ctrl.term}}&tab=bcl_only&vid=bclib_new&sortby=rank&offset=0">
                     Try your search in BC Collections</a>. </li>
-            <li translate="">Try different keywords.
+            <li>
+                Need something BC Libraries doesn't own? <a href="https://illiad.bc.edu/illiad/bxm/logon.html">Submit an interlibrary loan request</a>.
             </li>
         </ul>
     </md-card-content>
