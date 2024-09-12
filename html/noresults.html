@@ -23,16 +23,22 @@
             <li>
                 Didn't find what you were looking for? <a href="https://bc.on.worldcat.org/search?databaseList=&amp;queryString={{$ctrl.term}}">Try your search in WorldCat</a>.
             </li>
-            <li ng-if="$ctrl.scope == 'bcl'">
-                Looking for Articles? <a target="_self" ng-href="search?query=any,contains,{{$ctrl.term}}&tab=pci_only&vid=bclib_new&sortby=rank&offset=0">
+            <li ng-if="$ctrl.scope == 'MyInstitution'">
+                Looking for Articles? <a target="_self" ng-href="search?query=any,contains,{{$ctrl.term}}&tab=CentralIndex&search_scope=CentralIndex&vid=01BC_INST:bclib&offset=0">
                     Try your search in Articles</a>. </li>
-            <li ng-if="$ctrl.scope == 'pci'">
-                Looking for Books? <a target="_self" ng-href="search?query=any,contains,{{$ctrl.term}}&tab=bcl_only&vid=bclib_new&sortby=rank&offset=0">
+            <li ng-if="$ctrl.scope == 'CentralIndex'">
+                Looking for Books? <a target="_self" ng-href="search?query=any,contains,{{$ctrl.term}}&tab=LibraryCatalog&search_scope=MyInstitution&vid=01BC_INST:bclib&offset=0">
                     Try your search in BC Collections</a>. </li>
             <li>
                 Need something that BC Libraries doesn't own? <a 
 href="https://illiad.bc.edu/illiad/bxm/logon.html">Submit an interlibrary loan request</a>.
             </li>
         </ul>
+        <p>
+            <span translate="" class="bold-text">Did you come here from a bookmark or link created before August 21, 2024?
+            </span>
+            <br>
+            <span translate="" >A few labels changed as a part of the system upgrade that occurred on this date. Most links should have redirected, but if you are getting no results from a link that once did have results, <a href="https://libguides.bc.edu/ask-a-librarian/email-us">please report it to us </a>and we will help you find the correct link.</span>
+        </p>
     </md-card-content>
 </md-card>
