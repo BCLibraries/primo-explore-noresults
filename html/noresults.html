@@ -1,38 +1,65 @@
 <md-card class="default-card zero-margin _md md-primoExplore-theme">
-    <md-card-title>
-        <md-card-title-text>
-            <span translate="" class="md-headline">No results found
-            </span>
-        </md-card-title-text>
-    </md-card-title>
-    <md-card-content>
-        <p>
-            <!---->
-            <span ng-if="$ctrl.showQuery()" translate="nui.noresults.description" translate-value-term="{{$ctrl.term}}">There are no results matching your search <em>"{{$ctrl.term}}"</em>.
-            </span>
-            <!---->
-            <!---->
-        </p>
-        <p>
-            <span translate="" class="bold-text">Suggestions:
-            </span>
-        </p>
-        <ul>
-            <li translate="">Try different keywords.
-            </li>
-            <li>
-                Didn't find what you were looking for? <a href="https://bc.on.worldcat.org/search?databaseList=&amp;queryString={{$ctrl.term}}">Try your search in WorldCat</a>.
-            </li>
-            <li ng-if="$ctrl.scope == 'MyInstitution'">
-                Looking for Articles? <a target="_self" ng-href="search?query=any,contains,{{$ctrl.term}}&tab=CentralIndex&search_scope=CentralIndex&vid=01BC_INST:bclib&offset=0">
-                    Try your search in Articles</a>. </li>
-            <li ng-if="$ctrl.scope == 'CentralIndex'">
-                Looking for Books? <a target="_self" ng-href="search?query=any,contains,{{$ctrl.term}}&tab=LibraryCatalog&search_scope=MyInstitution&vid=01BC_INST:bclib&offset=0">
-                    Try your search in BC Collections</a>. </li>
-            <li>
-                Need something that BC Libraries doesn't own? <a 
-href="https://illiad.bc.edu/illiad/bxm/logon.html">Submit an interlibrary loan request</a>.
-            </li>
-        </ul>
-    </md-card-content>
+  <md-card-title>
+    <md-card-title-text>
+      <span translate="" class="md-headline">No results found </span>
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-content>
+    <p>
+      <!---->
+      <span
+        ng-if="$ctrl.showQuery()"
+        translate="nui.noresults.description"
+        translate-value-term="{{$ctrl.term}}"
+        >There are no results matching your search <em>"{{$ctrl.term}}"</em>.
+      </span>
+      <!---->
+      <!---->
+    </p>
+    <p>
+      <span translate="" class="bold-text">Suggestions: </span>
+    </p>
+    <ul>
+      <li translate="">Try different keywords.</li>
+      <li ng-if="$ctrl.scope == 'MyInstitution'">
+        Didn't find what you were looking for?
+        <a
+          href="https://bc.on.worldcat.org/search?databaseList=&amp;queryString={{$ctrl.term}}"
+          >Try your search in WorldCat</a
+        >.
+      </li>
+      <li ng-if="$ctrl.scope == 'MyInstitution'">
+        Looking for Articles?
+        <a
+          target="_self"
+          ng-href="search?query=any,contains,{{$ctrl.term}}&tab=CentralIndex&search_scope=CentralIndex&vid=01BC_INST:bclib&offset=0"
+        >
+          Try your search in Articles</a
+        >.
+      </li>
+      <li ng-if="$ctrl.scope == 'CentralIndex'">
+        <a
+          target="_self"
+          ng-href="search?query=any,contains,{{$ctrl.term}}&tab=CentralIndex&search_scope=CentralIndex&vid=01BC_INST:bclib&offset=0&pcAvailability=true"
+        >
+          Expand your search beyond library collections</a
+        >.
+      </li>
+      <li ng-if="$ctrl.scope == 'CentralIndex'">
+        Looking for Books?
+        <a
+          target="_self"
+          ng-href="search?query=any,contains,{{$ctrl.term}}&tab=LibraryCatalog&search_scope=MyInstitution&vid=01BC_INST:bclib&offset=0"
+        >
+          Try your search in BC Collections</a
+        >.
+      </li>
+      <li>
+        Need something that BC Libraries doesn't own?
+        <a href="https://illiad.bc.edu/illiad/bxm/logon.html"
+          >Submit an interlibrary loan request</a
+        >.
+      </li>
+    </ul>
+  </md-card-content>
 </md-card>
